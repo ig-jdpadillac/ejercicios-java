@@ -1,5 +1,7 @@
 package app;
 
+import app.poo.Persona;
+
 // [Modificador] tipo identificador ['valor']
 public class App {
 
@@ -25,10 +27,25 @@ public class App {
     double myDouble = 10;
 
     public static void main(String[] args) {
-        App ejem = new App();
-
+        // App ejem = new App();
         // ejem.imprimirElementos();
-        ejem.imprimirFloat();
+        // ejem.imprimirFloat();
+
+        // Cambiando y asignando informacion deobjetos
+        Persona p1 = new Persona("Juan", "Padilla", 22, "Masculino");
+        System.out.println(p1.regresarApellido());
+        p1.asignarApellido("Otro apellido distinto");
+        System.out.println(p1.regresarApellido());
+
+
+        // Clase String
+
+        
+        String var1 = "Hola";
+        String var2 = "Hola";
+        String var3 = new String("Hola");
+
+
     }
 
     public void imprimirElementos() {
