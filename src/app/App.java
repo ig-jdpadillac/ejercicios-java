@@ -1,5 +1,6 @@
 package app;
 
+import app.manejoStrings.HabilidadesBasicasStrign;
 import app.poo.Persona;
 
 // [Modificador] tipo identificador ['valor']
@@ -31,19 +32,22 @@ public class App {
         // ejem.imprimirElementos();
         // ejem.imprimirFloat();
 
-        // Cambiando y asignando informacion deobjetos
-        Persona p1 = new Persona("Juan", "Padilla", 22, "Masculino");
-        System.out.println(p1.regresarApellido());
-        p1.asignarApellido("Otro apellido distinto");
-        System.out.println(p1.regresarApellido());
+        // // Cambiando y asignando informacion deobjetos
+        // Persona p1 = new Persona("Juan", "Padilla", 22, "Masculino");
+        // System.out.println(p1.regresarApellido());
+        // p1.asignarApellido("Otro apellido distinto");
+        // System.out.println(p1.regresarApellido());
 
 
-        // Clase String
+        // // Clase String
 
         
-        String var1 = "Hola";
-        String var2 = "Hola";
-        String var3 = new String("Hola");
+        // String var1 = "Hola";
+        // String var2 = "Hola";
+        // String var3 = new String("Hola");
+
+        HabilidadesBasicasStrign cadenas = new HabilidadesBasicasStrign();
+        cadenas.MostrarCadena();
 
 
     }
