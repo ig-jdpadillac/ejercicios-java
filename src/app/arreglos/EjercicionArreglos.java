@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class EjercicionArreglos {
 
-    private final int semestres = 6;
+    private final int bumestres = 6;
     private final int calificacionGeneral;
     private double calificaciones[] = new double[6];
 
@@ -12,6 +12,8 @@ public class EjercicionArreglos {
 
         EjercicionArreglos objeto = new EjercicionArreglos(70);
         objeto.solicitaCalificaciones();
+        objeto.imprimeCalificacionBimestre();
+        System.out.println("Y su promedio es de " + objeto.calcularPromedio());
     }
 
     public EjercicionArreglos(int calificacionGeneralparam) {
@@ -33,7 +35,26 @@ public class EjercicionArreglos {
     }
 
     public void imprimeCalificacionBimestre() {
-        
+        for (int i = 0; i < calificaciones.length; i++) {
+            if (calificaciones[i] < calificacionGeneral) {
+                System.out.println("Con un " + calificaciones[i] + " Repruebas el bimestre");
+            } else {
+                System.out.println("Con un " + calificaciones[i] + " Apruebas el bimentre");
+            }
+        }
+    }
+
+
+    public double calcularPromedio() {
+        double suma = 0;
+
+        for (double calificacion: calificaciones) {
+            suma += calificacion;
+        }
+
+        suma = suma / bumestres;
+
+        return suma;
     }
 
 }
